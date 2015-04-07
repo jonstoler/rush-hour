@@ -81,10 +81,7 @@ class GraphSearch:
         paths = [[[start.contents.identity(), start.contents.action]]]
 
         while(len(paths) > 0):
-            print(len(paths))
             path = algorithm.pop(paths)
-            print(len(path))
-            print("")
             node = path[len(path) - 1]
             node = self.hashTable[node[0]]
             if node.contents.isSolution():
