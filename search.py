@@ -107,6 +107,6 @@ class GraphSearch:
         a = grid.findCar("A")
         cost = (5 - a.position["x"])
         for c in grid.cars:
-            if c.designation != "A" and ((c.position["y"] + c.length) > 2):
+            if c.designation != "A" and ((c.position["y"] + c.length) > 2) and (c.position["x"] > a.position["x"]):
                 cost += 1
         return cost
